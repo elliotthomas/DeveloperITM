@@ -97,14 +97,12 @@
 
             ctrl.newCandidate = null;
 
-            //TODO Add code to add a new candidate
             ctrl.addNewCandidate = function () {
               console.log("in add new candidate");
-              console.log("new candidate name ->" ,ctrl.newCandidate);
               ctrl.onCreate({$candidate: ctrl.newCandidate});
+              ctrl.newCandidate = buildNewCandidate();
             };//end add new candidate
 
-            //TODO Add code to remove a candidate
             ctrl.removeCandidate = function (candidate) {
               console.log('in remove candidate');
               ctrl.onDelete({$candidate: candidate})
@@ -122,7 +120,7 @@
                   color += letters[Math.floor(Math.random() * 16)];
                 }
                 return color;
-              }
+              };//end getRandomColor
 		}
 
 })(window.angular);
@@ -146,6 +144,7 @@
 			var ctrl = this;
 
             ctrl.getCandidatePercentage = function (votes) {
+              console.log('inget candidate percentage');
                 var total = _.sumBy(ctrl.candidates, "votes");
                 if (total) {
                     return (100 * votes / total).toFixed(0) + "%"

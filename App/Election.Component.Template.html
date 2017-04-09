@@ -6,16 +6,16 @@
 			</tf-election-results>
 		</div>
 		<div>
-			<div>
+			<div class="row">
 				<!--Vote Component-->
-				<div>
+				<div class="col-md-6" align= 'center'>
 					<tf-election-vote
 						candidates="$ctrl.candidates"
 						on-vote="$ctrl.onVote($candidate)">
 					</tf-election-vote>
 				</div>
 				<!--Candidate Component-->
-				<div>
+				<div class="col-md-6 row-div" align= 'center'>
 					<tf-election-candidate
 						candidates="$ctrl.candidates"
 						on-create = '$ctrl.onCandidateCreate($candidate)'

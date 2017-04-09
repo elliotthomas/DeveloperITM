@@ -1,14 +1,14 @@
-<h3>
-    Live Results - Which candidate brings the most joy
-</h3>
 
-<table>
+<h3 class = 'text-center'>Live Results - Which candidate brings the most joy</h3>
+
+<table class = 'table-condensed'>
     <thead>
         <tr>
-            <th></th>
+            <th>Rank</th>
             <th>Candidate</th>
 			      <th>Votes</th>
-            <th>Percentage of Votes Recieved</th>
+            <th>Percentage</th>
+            <th>Candidate Color</th>
         </tr>
     </thead>
     <tbody>
@@ -24,6 +24,8 @@
 			       </td>
              <td>
                  <span ng-bind = "$ctrl.getCandidatePercentage(candidate.votes)"></span>
+             </td>
+             <td ng-style = "{'background-color': candidate.color}">
              </td>
 
         </tr>

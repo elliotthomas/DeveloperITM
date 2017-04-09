@@ -2,11 +2,11 @@
     <div>
         <!-- List of Candidates -->
         <h3>Manage Candidates</h3>
-        <ol ng-repeat="candidate in $ctrl.candidates">
-          <button type="button" ng-click="$ctrl.removeCandidate(candidate)">
-              <span class="text-info" ng-bind="candidate.name"></span>
+        <div ng-repeat="candidate in $ctrl.candidates">
+          <button class= 'btn btn-danger' type="button" ng-click="$ctrl.removeCandidate(candidate)">
+              <span ng-bind = "candidate.name"></span><span class= 'glyphicon glyphicon-trash'></span>
           </button>
-        </ol>
+        </div>
 
     </div>
     <div>
@@ -15,10 +15,7 @@
         <div ng-form="$ctrl.form">
             <div>
                 <input type="text" placeholder="Enter Candidate Name" required ng-model="$ctrl.newCandidate.name"/>
-            </div>
-            <div>
-                <button type="button" ng-disabled="$ctrl.form.$invalid" ng-click= "$ctrl.addNewCandidate()"  > + </button>
-				<!--TODO Implement a add candidate function-->
+                <button type="button" ng-disabled="$ctrl.form.$invalid" ng-click= "$ctrl.addNewCandidate()"> + </button>
             </div>
         </div>
     </div>

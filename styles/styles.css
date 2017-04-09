@@ -1,0 +1,18 @@
+table {
+  border-radius: 5px;
+  width: 50%;
+  margin: 0px auto;
+  float: none;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  height: 50px;
+}
+
+.btn {
+  width: 150px;
+}
