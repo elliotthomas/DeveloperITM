@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+body {
+  background-color: #e5e5e5;
+  font-family: Merriweather, serif;
+}
+
 table {
   border-radius: 5px;
-  width: 50%;
+  width: 85%;
   margin: 0px auto;
   float: none;
 }
@@ -15,4 +22,8 @@ th {
 
 .btn {
   width: 150px;
+}
+
+.add {
+  width: 205px;
 }

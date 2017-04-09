@@ -8,14 +8,14 @@
 		<div>
 			<div class="row">
 				<!--Vote Component-->
-				<div class="col-md-6" align= 'center'>
+				<div class="col-md-4" align= 'center'>
 					<tf-election-vote
 						candidates="$ctrl.candidates"
 						on-vote="$ctrl.onVote($candidate)">
 					</tf-election-vote>
 				</div>
 				<!--Candidate Component-->
-				<div class="col-md-6 row-div" align= 'center'>
+				<div>
 					<tf-election-candidate
 						candidates="$ctrl.candidates"
 						on-create = '$ctrl.onCandidateCreate($candidate)'

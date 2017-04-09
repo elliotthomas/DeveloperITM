@@ -1,21 +1,26 @@
 <div>
-    <div>
+    <div class="col-md-4" align= 'center'>
         <!-- List of Candidates -->
         <h3>Manage Candidates</h3>
         <div ng-repeat="candidate in $ctrl.candidates">
-          <button class= 'btn btn-danger' type="button" ng-click="$ctrl.removeCandidate(candidate)">
-              <span ng-bind = "candidate.name"></span><span class= 'glyphicon glyphicon-trash'></span>
+          <button ng-mouseover = "check = true" ng-mouseleave = "check = false" class= 'btn btn-danger' type="button" ng-click="$ctrl.removeCandidate(candidate)">
+              <span ng-if = "!check" ng-bind = "candidate.name"></span><span ng-if = "check" class= 'glyphicon glyphicon-trash'></span>
           </button>
         </div>
 
     </div>
-    <div>
+    <div class="col-md-4" align= 'center'>
         <!-- Candidate Form -->
-        <h4>Add Candidate</h4>
+        <h3>Add Candidate</h3>
         <div ng-form="$ctrl.form">
             <div>
                 <input type="text" placeholder="Enter Candidate Name" required ng-model="$ctrl.newCandidate.name"/>
-                <button type="button" ng-disabled="$ctrl.form.$invalid" ng-click= "$ctrl.addNewCandidate()"> + </button>
+            </div>
+            <div>
+                <button class = "btn btn-primary add" type="button" ng-disabled="$ctrl.form.$invalid" ng-click= "$ctrl.addNewCandidate()">
+                  <span class= 'glyphicon glyphicon-plus'></span>
+                  Add Candidate
+                </button>
             </div>
         </div>
     </div>
